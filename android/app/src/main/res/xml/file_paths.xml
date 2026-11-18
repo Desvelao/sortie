@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- "Open with" hands the file being sorted to another app, read-only. Files live on shared storage. -->
+    <external-path name="shared" path="." />
+    <root-path name="volumes" path="/storage/" />
+</paths>

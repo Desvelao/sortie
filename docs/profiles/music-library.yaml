@@ -1,0 +1,30 @@
+# Music sorted by artist and album from the files' tags:
+#   Daft Punk/Discovery/One More Time.mp3
+version: 1
+name: Music library
+input_directory: ~/Downloads/music
+recursive: true
+destination_root: ~/Music/Library
+destination_template: "{artist}/{album}/{filename}"
+
+variables:
+  - name: artist
+    sources:
+      - kind: manual
+      - kind: metadata
+        field: artist
+    fallback: Unknown artist     # used when a file has no artist tag
+  - name: album
+    sources:
+      - kind: manual
+      - kind: metadata
+        field: album
+    fallback: Unknown album
+
+tags:
+  # No own template: files go to the profile template above.
+  - {name: Keep, shortcut: K}
+  # Favourites are additionally collected in one folder, by artist.
+  - name: Favourite
+    shortcut: F
+    destination_template: "Favourites/{artist}/{filename}"

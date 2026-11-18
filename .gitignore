@@ -1,0 +1,43 @@
+# Desktop (Go)
+/desktop/sortie
+/desktop/release/
+/desktop/verify-logs/
+*.test
+# Local task backlog / tooling (desktop)
+/desktop/tasks.csv
+/desktop/tack.yaml
+
+# Android (Gradle)
+build/
+.gradle/
+.kotlin/
+local.properties
+*.jks
+*.keystore
+keystore.properties
+*.apk
+*.aab
+
+# Editors / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Secrets / misc
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.bak-*
+.claude/settings.local.json
+
+# Signing material: only ever stored as GitHub Actions secrets
+*.b64
+signing-secrets*

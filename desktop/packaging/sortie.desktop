@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Sortie
+GenericName=File classifier
+Comment=Classify files with tags and copy them into folders you define
+Exec=@EXEC@
+Icon=sortie
+Terminal=false
+Categories=Utility;FileTools;
+Keywords=sort;tag;organize;photos;files;

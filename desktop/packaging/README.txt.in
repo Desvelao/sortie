@@ -1,0 +1,66 @@
+Sortie @VERSION@  (Linux x86_64)
+=====================================
+
+A keyboard-driven tool to classify files with tags and copy them into
+folders built from data in the file name, folder or metadata (by default
+year/tag, e.g. Sorted/2019/Music/Concert_2019.mp3). Any file type can be
+classified; previews are optional. It works fully offline.
+
+QUICK START
+  1. Install the runtime libraries listed below (most desktops already have them).
+  2. Run ./sortie  (or ./install.sh to add it to your applications menu).
+  3. Ctrl+O to choose a folder, press the tag keys (1-9), Ctrl+Shift+C to copy.
+  4. Settings (Ctrl+,): destination folder, tags, variables, shortcuts.
+     Each use case is a "profile" (a YAML file): see docs/PROFILES.md
+     and the examples in docs/profiles/ next to this file.
+
+NOTHING ELSE IS NEEDED
+  No Go, Python or SQLite installation is required; the database engine is built in.
+  The program needs only the graphics libraries below.
+
+REQUIREMENTS
+  * Linux x86_64 with glibc 2.34 or newer. Tested: Debian 12, Ubuntu 22.04 and 24.04,
+    Fedora 41, Arch Linux, openSUSE Tumbleweed. NOT supported: Debian 11, Ubuntu 20.04
+    (older glibc) and musl-based systems such as Alpine.
+  * A desktop session (X11 or Wayland) with OpenGL (hardware or Mesa software).
+  * Libraries (package names):
+      Debian/Ubuntu: libgl1 libx11-6 libwayland-client0 libwayland-cursor0 libwayland-egl1
+                     libxkbcommon0 libxcursor1 libxrandr2 libxinerama1 libxi6 libxxf86vm1
+      Fedora:        mesa-libGL libX11 libwayland-client libwayland-cursor libwayland-egl
+                     libxkbcommon libXcursor libXrandr libXinerama libXi libXxf86vm
+      Arch:          mesa libx11 wayland libxkbcommon libxcursor libxrandr libxinerama libxi
+                     libxxf86vm
+      openSUSE:      Mesa-libGL1 libX11-6 libwayland-client0 libwayland-cursor0 libwayland-egl1
+                     libxkbcommon0 libXcursor1 libXrandr2 libXinerama1 libXi6 libXxf86vm1
+    Only libGL, libX11 and libwayland-client are linked at start-up; the others are loaded
+    when needed (cursors, multi-monitor, keyboard layouts, Wayland).
+  * Optional: PulseAudio/PipeWire-pulse or ALSA for audio playback.
+
+CHECK YOUR SYSTEM
+  ./sortie --version      prints the version
+  ./sortie --self-test    headless end-to-end check (database, scan, tag, copy);
+                               uses a temporary folder and never touches your data
+
+WHERE YOUR DATA LIVES (never inside the program folder)
+  Settings   ~/.config/sortie/config.json
+  Profiles   ~/.config/sortie/profiles/*.yaml   (tags, variables, destinations)
+  Database   ~/.local/share/sortie/database.sqlite
+  Log        ~/.local/state/sortie/sortie.log
+  Thumbnails ~/.cache/sortie/thumbnails   (safe to delete)
+  (the XDG_CONFIG_HOME / XDG_DATA_HOME / XDG_STATE_HOME / XDG_CACHE_HOME variables are honoured)
+
+SAFETY
+  Source files are never modified or deleted. Files are copied through a temporary file,
+  verified by SHA-256 and published without overwriting anything unless you explicitly
+  choose "replace". Nothing in the destination is ever deleted by the program.
+
+INSTALL / UNINSTALL
+  ./install.sh                 for your user (~/.local), no root needed
+  sudo ./install.sh --system   for all users (/usr/local)
+  ./uninstall.sh [--system]    removes the program, keeps your data
+
+VERIFY THE DOWNLOAD
+  sha256sum -c SHA256SUMS      (inside the folder)   |   sha256sum -c <archive>.sha256
+
+LICENSE
+  See LICENSE and THIRD_PARTY_LICENSES.txt.

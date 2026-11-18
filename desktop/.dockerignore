@@ -1,0 +1,6 @@
+release/
+.git/
+# local build output and logs: never needed in the image build context
+/sortie
+verify-logs/
+*.test

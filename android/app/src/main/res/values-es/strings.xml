@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_profile_name">Predeterminado</string>
+    <string name="scan_skipped">No se pudieron leer %1$d carpetas y se omitieron</string>
+    <string name="busy_copying">Espera a que termine la copia</string>
+    <string name="profile_in_use">No se puede eliminar el perfil en uso</string>
+    <string name="profile_imported">Importado «%1$s»</string>
+    <string name="cache_cleared">Caché de miniaturas vaciada</string>
+    <string name="leftovers_removed">%1$d archivos temporales eliminados</string>
+    <string name="copy_channel">Progreso de la copia</string>
+    <string name="copy_notification_title">Copiando archivos</string>
+    <string name="copy_progress">%1$d de %2$d</string>
+
+    <!-- general -->
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar</string>
+    <string name="back">Atrás</string>
+    <string name="save">Guardar</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="rename">Renombrar</string>
+    <string name="duplicate">Duplicar</string>
+    <string name="export">Exportar</string>
+    <string name="dismiss">Descartar</string>
+    <string name="more">Más opciones</string>
+    <string name="loading">Cargando…</string>
+    <string name="checking">comprobando…</string>
+    <string name="browse">Examinar…</string>
+
+    <!-- permission -->
+    <string name="access_explanation">Para ordenar archivos por su ubicación real, la app necesita acceso a todos los archivos del dispositivo. Solo lee tus carpetas y copia archivos; nunca mueve ni borra tus originales y no tiene acceso a internet.</string>
+    <string name="grant_access">Permitir acceso a todos los archivos</string>
+
+    <!-- sorter -->
+    <string name="no_folder">Elige la carpeta con los archivos a ordenar.</string>
+    <string name="choose_folder">Elegir carpeta</string>
+    <string name="folder_empty">Esta carpeta no tiene archivos que ordenar.</string>
+    <string name="no_match">Ningún archivo coincide con el filtro actual.</string>
+    <string name="show_all">Mostrar todos los archivos</string>
+    <string name="rescan">Volver a analizar</string>
+    <string name="no_files">Sin archivos</string>
+    <string name="no_tags">Este perfil no tiene etiquetas activas. Añade algunas en el editor de perfiles.</string>
+    <string name="position_summary">%1$d / %2$d · %3$d con etiqueta</string>
+    <string name="checking_statuses">Comprobando destinos %1$d / %2$d</string>
+    <string name="manage_profiles">Gestionar perfiles…</string>
+    <string name="filter_menu">Mostrar archivos</string>
+    <string name="copy_menu">Copiar</string>
+    <string name="copy_current">Copiar este archivo</string>
+    <string name="copy_all">Copiar todos los archivos con etiqueta</string>
+    <string name="first_file">Primer archivo</string>
+    <string name="last_file">Último archivo</string>
+    <string name="history">Historial de copias</string>
+    <string name="profiles">Perfiles</string>
+    <string name="settings">Ajustes</string>
+    <string name="remove_temp_files">Eliminar archivos temporales</string>
+    <string name="var_manual">manual</string>
+    <string name="var_unresolved">sin resolver</string>
+    <string name="var_invalid">no válida</string>
+    <string name="manual_value_title">Valor de %1$s</string>
+    <string name="manual_value_label">Valor (vacío para borrar)</string>
+
+    <plurals name="interrupted_banner">
+        <item quantity="one">%d copia se interrumpió la última vez.</item>
+        <item quantity="other">%d copias se interrumpieron la última vez.</item>
+    </plurals>
+    <plurals name="leftovers_banner">
+        <item quantity="one">Quedó %d archivo temporal en un destino.</item>
+        <item quantity="other">Quedaron %d archivos temporales en los destinos.</item>
+    </plurals>
+
+    <!-- filters -->
+    <string name="filter_all">Todos los archivos</string>
+    <string name="filter_untagged">Sin etiqueta</string>
+    <string name="filter_tagged">Con etiqueta</string>
+    <string name="filter_unresolved">Variables sin resolver</string>
+    <string name="filter_ready">Listos para copiar</string>
+    <string name="filter_already_copied">Ya copiados</string>
+    <string name="filter_conflicts">Conflictos</string>
+    <string name="filter_errors">Errores</string>
+
+    <!-- destination and copy status -->
+    <string name="status_ready">listo para copiar</string>
+    <string name="status_already_copied">ya copiado</string>
+    <string name="status_conflict">conflicto</string>
+    <string name="status_unresolved">variable sin resolver</string>
+    <string name="status_invalid_path">ruta no válida</string>
+    <string name="status_error">error</string>
+    <string name="result_copied">copiado</string>
+    <string name="result_replaced">reemplazado</string>
+    <string name="result_renamed">copiado con otro nombre</string>
+    <string name="result_conflict_skipped">omitido (conflicto)</string>
+    <string name="result_skipped_invalid">omitido (no válido)</string>
+    <string name="result_failed">falló</string>
+    <string name="result_cancelled">cancelado</string>
+
+    <!-- previews -->
+    <string name="no_preview">Sin vista previa</string>
+    <string name="open_with">Abrir con…</string>
+    <string name="play">Reproducir</string>
+    <string name="pause">Pausar</string>
+    <string name="file_size">Tamaño: %1$s</string>
+
+    <!-- folder picker -->
+    <string name="storage_volumes">Almacenamiento</string>
+    <string name="parent_folder">.. (subir)</string>
+    <string name="no_subfolders">Sin subcarpetas</string>
+    <string name="use_this_folder">Usar esta carpeta</string>
+    <string name="new_folder">Nueva carpeta</string>
+    <string name="folder_name">Nombre de la carpeta</string>
+    <string name="invalid_folder_name">Ese nombre de carpeta no es válido.</string>
+    <string name="folder_not_created">No se pudo crear %1$s</string>
+
+    <!-- copy sheet and history -->
+    <string name="copy_current_title">Copiar este archivo</string>
+    <string name="copy_all_title">Copiar todos los archivos con etiqueta</string>
+    <string name="checking_destinations">Comprobando destinos…</string>
+    <string name="nothing_to_copy">Nada que copiar: pon etiquetas a algunos archivos primero.</string>
+    <string name="on_conflict">Si ya existe un archivo distinto</string>
+    <string name="policy_skip">Omitirlo</string>
+    <string name="policy_rename">Conservar ambos (nombre nuevo)</string>
+    <string name="policy_replace">Reemplazarlo</string>
+    <string name="start_copy">Empezar a copiar</string>
+    <string name="replace_title">¿Reemplazar los archivos existentes?</string>
+    <string name="copying">Copiando</string>
+    <string name="cancelling">Cancelando…</string>
+    <string name="copy_finished">Copia terminada</string>
+    <string name="copy_failed">La copia falló</string>
+    <string name="copy_summary">%1$d de %2$d completados, %3$d fallidos</string>
+    <string name="history_title">Historial: %1$s</string>
+    <string name="history_empty">Este archivo aún no se ha copiado.</string>
+    <string name="history_in_progress">en curso</string>
+    <plurals name="copy_jobs">
+        <item quantity="one">%d copia por hacer</item>
+        <item quantity="other">%d copias por hacer</item>
+    </plurals>
+    <plurals name="replace_warning">
+        <item quantity="one">Se sobrescribirá %d archivo existente. No se puede deshacer.</item>
+        <item quantity="other">Se sobrescribirán %d archivos existentes. No se puede deshacer.</item>
+    </plurals>
+
+    <!-- profiles -->
+    <string name="new_profile">Nuevo perfil</string>
+    <string name="import_profile">Importar</string>
+    <string name="profile_name">Nombre del perfil</string>
+    <string name="profile_active">En uso</string>
+    <string name="profile_actions">Acciones de %1$s</string>
+    <string name="use_profile">Usar este perfil</string>
+    <string name="profile_exported">Perfil exportado</string>
+    <string name="profile_export_failed">No se pudo exportar el perfil</string>
+    <string name="delete_profile_title">¿Eliminar «%1$s»?</string>
+    <plurals name="delete_profile_text">
+        <item quantity="one">%d archivo tiene etiqueta en este perfil. El archivo del perfil va a la papelera y se borran sus etiquetas e historial.</item>
+        <item quantity="other">%d archivos tienen etiqueta en este perfil. El archivo del perfil va a la papelera y se borran sus etiquetas e historial.</item>
+    </plurals>
+
+    <!-- profile editor -->
+    <string name="edit_profile">Editar perfil</string>
+    <string name="tab_general">General</string>
+    <string name="tab_tags">Etiquetas</string>
+    <string name="tab_variables">Variables</string>
+    <string name="tab_yaml">YAML</string>
+    <string name="discard_title">¿Descartar los cambios?</string>
+    <string name="discard_text">Tus ediciones de este perfil no se han guardado.</string>
+    <string name="discard">Descartar</string>
+    <string name="profile_description">Descripción</string>
+    <string name="input_directory">Carpeta a ordenar</string>
+    <string name="recursive">Incluir subcarpetas</string>
+    <string name="destination_root">Carpeta de destino</string>
+    <string name="destination_template">Plantilla de destino</string>
+    <string name="template_hint">{year}/{tag}/{filename}</string>
+    <string name="tag_name">Nombre de la etiqueta</string>
+    <string name="tag_shortcut">Tecla de atajo</string>
+    <string name="tag_destination">Nombre de la carpeta de destino</string>
+    <string name="tag_template">Plantilla de destino propia</string>
+    <string name="tag_color">Color</string>
+    <string name="tag_enabled">Activada</string>
+    <string name="add_tag">Añadir etiqueta</string>
+    <string name="var_name">Nombre de la variable</string>
+    <string name="var_fallback">Valor por defecto</string>
+    <string name="var_regex">Debe cumplir (regex)</string>
+    <string name="var_min">Mínimo</string>
+    <string name="var_max">Máximo</string>
+    <string name="var_sources">De dónde sale el valor</string>
+    <string name="add_source">Añadir origen</string>
+    <string name="add_variable">Añadir variable</string>
+    <string name="source_kind">Origen</string>
+    <string name="source_pattern">Patrón (regex)</string>
+    <string name="source_group">Grupo de captura</string>
+    <string name="source_field">Campo de metadatos</string>
+    <string name="source_format">Formato de fecha</string>
+    <string name="source_value">Valor</string>
+    <string name="move_up">Subir %1$s</string>
+    <string name="move_down">Bajar %1$s</string>
+    <string name="remove_item">Quitar %1$s</string>
+
+    <!-- settings -->
+    <string name="setting_filmstrip">Mostrar la tira de miniaturas</string>
+    <string name="setting_skip_hidden">Omitir archivos y carpetas ocultos</string>
+    <string name="setting_cache">Límite de la caché de miniaturas: %1$d MB</string>
+    <string name="cache_usage">En uso: %1$s</string>
+    <string name="clear_cache">Vaciar caché de miniaturas</string>
+    <string name="version">Versión %1$s</string>
+    <string name="bar_no_tags">Etiqueta este archivo para elegir un destino</string>
+    <string name="bar_destination">Destino · %1$s</string>
+    <string name="bar_destinations">%1$d destinos</string>
+    <string name="tile_copied">Copiados</string>
+    <string name="tile_skipped">Omitidos</string>
+    <string name="tile_failed">Fallidos</string>
+    <string name="run_in_background">Seguir en segundo plano</string>
+    <string name="background_hint">La copia continúa si cierras esto. Toca la franja de progreso para volver.</string>
+</resources>

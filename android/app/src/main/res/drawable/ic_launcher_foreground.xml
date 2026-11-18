@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A folder with a tag dot, inside the adaptive-icon safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFB4E33D"
+        android:pathData="M34,38h14l5,6h21c2.2,0 4,1.8 4,4v20c0,2.2 -1.8,4 -4,4H34c-2.2,0 -4,-1.8 -4,-4V42c0,-2.2 1.8,-4 4,-4z" />
+    <path
+        android:fillColor="#FF0E1116"
+        android:pathData="M54,58m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+</vector>

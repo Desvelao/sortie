@@ -1,0 +1,54 @@
+# Runs the same checks as `make check` locally (see AGENTS.md). Releases are in release.yml.
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+    paths: &paths
+      - 'desktop/**'
+      - 'android/**'
+      - 'docs/**'
+      - 'scripts/**'
+      - 'VERSION'
+      - 'Makefile'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    paths: *paths
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: scripts/check-version.sh
+
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make -C desktop image
+      - name: gofmt, vet, tests, build, GUI smoke test
+        run: make -C desktop check
+      - name: tests with the race detector
+        run: make -C desktop test-race
+
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v4
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Unit tests and lint
+        run: make -C android check RUN=

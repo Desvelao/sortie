@@ -1,0 +1,30 @@
+# Invoices by month and invoice number (taken from the file name when it has one):
+#   2021-03/Invoices/INV-0042/INV-0042_scan.pdf
+#   2021-03/Invoices/no-number/scan.pdf
+version: 1
+name: Invoices
+input_directory: ~/Documents/scans
+destination_root: ~/Documents/Invoices
+destination_template: "{month}/{tag}/{number|no-number}/{filename}"
+
+variables:
+  - name: number
+    sources:
+      - kind: filename
+        pattern: '(INV-[0-9]{3,6})'
+        group: 1
+    validate:
+      regex: '^INV-[0-9]+$'
+  # Month of the document: from the PDF's creation date, else the file's mtime.
+  - name: month
+    sources:
+      - kind: manual
+      - kind: metadata
+        field: date
+        format: "2006-01"
+      - kind: mtime
+        format: "2006-01"
+
+tags:
+  - {name: Invoices, shortcut: "1"}
+  - {name: Receipts, shortcut: "2"}

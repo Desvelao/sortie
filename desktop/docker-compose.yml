@@ -1,0 +1,35 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    image: sortie-dev
+    working_dir: /repo/desktop
+    volumes:
+      - ..:/repo
+      - gomod:/go/pkg
+      - gocache:/home/dev/.cache
+      - fsconfig:/home/dev/.config
+      - fsdata:/home/dev/.local/share
+  gui:
+    extends: dev
+    volumes:
+      - ..:/repo
+      - gomod:/go/pkg
+      - gocache:/home/dev/.cache
+      - fsconfig:/home/dev/.config
+      - fsdata:/home/dev/.local/share
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ${XAUTHORITY:-/dev/null}:/home/dev/.Xauthority:ro
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=/home/dev/.Xauthority
+    network_mode: host
+volumes:
+  gomod:
+  gocache:
+  fsconfig:
+  fsdata:
